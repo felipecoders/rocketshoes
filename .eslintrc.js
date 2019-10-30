@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es6: true,
   },
-  extends: ['airbnb', 'prettier'],
+  extends: ['airbnb', 'prettier', 'prettier/react'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -18,7 +18,9 @@ module.exports = {
   plugins: ['react', 'prettier'],
   rules: {
     'prettier/prettier': 'error',
-    'react/jsx-filename-extension': 'off',
+    'react/jsx-filename-extension': ['warn', { extensions: ['.jsx', '.js'] }],
+    'react/state-in-constructor': 'off',
     'import/prefer-default-export': 'off',
+    'react/static-property-placement': 'off',
   },
 };
